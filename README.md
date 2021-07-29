@@ -1,2 +1,2 @@
 # helm-charts
-test helm chart release and deployment using github actions
+Test helm chart release and deployment using github actions
