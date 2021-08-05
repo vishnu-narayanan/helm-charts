@@ -3,6 +3,19 @@ entries:
   test:
   - apiVersion: v2
     appVersion: v1.17.0
+    created: "2021-08-05T16:43:23.196680427Z"
+    description: A Helm chart for Kubernetes
+    digest: d1f9b7a5826afe3545920d658e78e732159bf16eb755b2cdccf7711b7d067931
+    maintainers:
+    - email: vishnu@pepalo.com
+      name: vishnu-narayanan
+    name: test
+    type: application
+    urls:
+    - https://github.com/vishnu-narayanan/helm-charts/releases/download/test-0.3.1/test-0.3.1.tgz
+    version: 0.3.1
+  - apiVersion: v2
+    appVersion: v1.17.0
     created: "2021-08-03T11:16:31.01013423Z"
     description: A Helm chart for Kubernetes
     digest: c33123892e539012db3e1a108c5e13198a1f41a2b3c24e2418d16ea0f5f8329a
@@ -11,4 +24,4 @@ entries:
     urls:
     - https://github.com/vishnu-narayanan/helm-charts/releases/download/test-0.3.0/test-0.3.0.tgz
     version: 0.3.0
-generated: "2021-08-03T11:16:31.01013893Z"
+generated: "2021-08-05T16:43:23.196687927Z"
