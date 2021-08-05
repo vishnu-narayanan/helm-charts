@@ -1,6 +1,7 @@
-# Default values for test.
+## Default values for test.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
+## test linting gh action
 
 replicaCount: 1
 
@@ -8,7 +9,7 @@ image:
   repository: nginx
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: ""
+  tag: "latest"
 
 imagePullSecrets: []
 nameOverride: ""
