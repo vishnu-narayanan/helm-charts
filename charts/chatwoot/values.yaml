@@ -1,7 +1,7 @@
 # Default values for test.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
-# test linting gh action
+## test linting gh action
 
 replicaCount: 1
 
