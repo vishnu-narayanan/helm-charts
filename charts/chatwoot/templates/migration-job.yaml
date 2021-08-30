@@ -26,6 +26,5 @@ spec:
       containers:
       - name: "db-migrate-job"
         image: "busybox:1.28"
-      	command: ['wget']
-      	args: ['https://google.com']
-
+        command: ['wget']
+        args: ['https://google.com']
