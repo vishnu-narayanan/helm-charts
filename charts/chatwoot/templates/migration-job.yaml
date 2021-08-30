@@ -1,0 +1,30 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: "{{ .Release.Name }}-migrate"
+  labels:
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}"
+    release: "{{ .Release.Name }}"
+    heritage: "{{ .Release.Service }}"
+  annotations:
+    # This is what defines this resource as a hook. Without this line, the
+    # job is considered part of the release.
+    "helm.sh/hook": {{ .Values.hooks.migrate.hookAnnotation }}
+    #"helm.sh/hook-delete-policy": "hook-succeeded,before-hook-creation"
+    "helm.sh/hook-weight": "-1"
+spec:
+  template:
+    spec:
+      restartPolicy: Never
+      initContainers:
+      - name: init-postgres
+        image: busybox:1.28
+        command: ["sh", "-c",  "sleep 3"]
+      - name: init-redis
+        image: busybox:1.28
+        command: ["sh", "-c", "sleep 4"]
+      containers:
+      - name: "db-migrate-job"
+        image: "busybox:1.28"
+        command: ['wget']
+        args: ['https://google.com']
